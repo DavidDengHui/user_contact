@@ -9,6 +9,16 @@ read -p "请输入远程仓库名: " Name
 read -p "请输入对本次上传的描述: " MSG
 SSH="git@github.com:DavidDengHui/"${Name}".git"
 
+cd ${Local}
+
+(
+cat <<EOF
+*.sh
+*.swp
+EOF
+) >.gitignore
+
+
 i=0
 
 git add ${Local}
