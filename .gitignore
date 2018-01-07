@@ -1,3 +1,5 @@
 # The following file types do not need to be uploaded
 *.sh
 *.swp
+*.inf.php
+inf.php

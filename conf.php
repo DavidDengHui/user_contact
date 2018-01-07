@@ -1,20 +1,6 @@
 <?php
 
-global $DB_HOST;
-global $DB_USER;
-global $DB_PSWD;
-global $DB_CNCT;
-global $DB_NAME;
-global $DB_TABL;
-
-$DB_HOST = "localhost";
-$DB_USER = "root";
-$DB_PSWD = "CovEarsdatabase666";
-$DB_NAME = "sc";
-$DB_TABL = "users";
-
-
-
+require_once("inf.php");
 
 /*
  * Do not edit the contents after this, if you don't know what you are doing!!!
