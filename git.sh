@@ -13,6 +13,7 @@ cd ${Local}
 
 (
 cat <<EOF
+# The following file types do not need to be uploaded
 *.sh
 *.swp
 EOF
