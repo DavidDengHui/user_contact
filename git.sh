@@ -2,7 +2,7 @@
 # Author: David Deng
 # Url: https://covear.top
 
-echo -e "\n【 开始上传 】\n"
+echo -e "\n【 开始同步 】\n"
 
 read -p "请输入本地文件夹路径: " Local
 read -p "请输入远程仓库名: " Name
@@ -19,21 +19,21 @@ cat <<EOF
 EOF
 ) >.gitignore
 
-git add ${Local}
 echo -e "【 添加本地文件 】"
-git status
+git add ${Local}
 echo -e "【 显示文件变化 】"
-git commit -m "${MSG}"
+git status
 echo -e "【 更新本地仓库 】"
-git remote rm ${Name}
+git commit -m "${MSG}"
 echo -e "【 删除远程缓存 】"
-git remote add ${Name} ${SSH}
+git remote rm ${Name}
 echo -e "【 添加远程仓库 】"
+git remote add ${Name} ${SSH}
+echo -e "【 添加远程链接 】"
 git remote set-url ${Name} ${SSH}
 echo -e "【 添加远程链接 】"
 git push -u ${Name} +master
-echo -e "【 上传远程仓库 】"
 
-echo -e "\n【 上传完成 】\n"
+echo -e "\n【 同步完成 】\n"
 exit
 
