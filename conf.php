@@ -1,5 +1,12 @@
 <?php
 
+global $DB_HOST;
+global $DB_USER;
+global $DB_PSWD;
+global $DB_CNCT;
+global $DB_NAME;
+global $DB_TABL;
+
 require_once("inf.php");
 
 /*
